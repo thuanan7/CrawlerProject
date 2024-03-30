@@ -1,18 +1,18 @@
 ﻿using CrawlerProject_Web.Models;
 using CrawlerProject_Web.Services.IServices;
-using Microsoft.VisualBasic;
 using Newtonsoft.Json;
 
 namespace CrawlerProject_Web.Services
 {
     public class CrawlerService : ICrawlerService
     {
-        private readonly string crawlerApiUrl = "https://localhost:7111/api/crawlerapi";
+        private readonly string crawlerApiUrl;
         public IHttpClientFactory httpClient { get; set; }
 
-        public CrawlerService(IHttpClientFactory httpClient)
+        public CrawlerService(IHttpClientFactory httpClient, IConfiguration configuration)
         {
             this.httpClient = httpClient;
+            crawlerApiUrl = configuration.GetValue<string>("ServiceUrls:CrawlerProjectAPI");
         }
 
         public async Task<List<Conference>> GetConferencesAsync()

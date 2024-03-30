@@ -25,22 +25,22 @@
                         {
                             <tr data-toggle="collapse"
                                 data-target="#collapse@(i + 1)"
-                                aria-expanded="false"
+                                aria-expanded="@(i==0?"true":"false")"
                                 aria-controls="collapse@(i+1)"
-                                class="collapsed">
+                                class="@(i==0?"":"collapsed")">
                                 <th scope="row">@(i + 1)</th>
                                 <td class="w-50">@(Model[i].Title)</td>
                                 <td class="w-25">@(Model[i].Date)</td>
                                 <td class="w-25">@(Model[i].Deadline)</td>
                                 <td>@(Model[i].Country)</td>
                                 <td>
-                                    <i class="fa" aria-hidden="false"></i>
+                                    <i class="fa" aria-hidden="@(i==0?"true":"false")"></i>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="6"
                                     id="collapse@(i+1)"
-                                    class="collapse acc"
+                                    class="collapse @(i==0?"show":"") acc"
                                     data-parent="#accordion">
                                     <div class="row">
                                         <div class="col-4">
@@ -92,7 +92,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+                                    <div class="d-grid gap-2 mt-3">
+                                        <a class="btn btn-primary text-white" href="@(Model[i].RegistrationUrl)" target="_blank">Register</a>
+                                    </div>
                                 </td>
                             </tr>
                         }
