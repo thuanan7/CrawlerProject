@@ -117,6 +117,38 @@
             &copy; 2024 - CrawlerProject_Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    <script>
+        // Tạo một WebSocket client
+        const webSocket = new WebSocket("wss://localhost:7150/ws");
+
+        // Lắng nghe sự kiện khi kết nối thành công
+        webSocket.onopen = function (event) {
+            console.log("WebSocket connection established.");
+        };
+
+        // Lắng nghe sự kiện khi nhận được tin nhắn từ server
+        webSocket.onmessage = function (event) {
+            const message = event.data;
+            if (message === "reload") {
+                // Nếu nhận được tin nhắn "reload" từ server, thực hiện reload trang web
+                webSocket.close();
+                window.location.reload();
+            }
+            else
+            {
+                console.log(message);
+            }
+        };
+
+        // Xử lý sự kiện khi có lỗi xảy ra trong kết nối WebSocket
+        webSocket.onerror = function (event) {
+            console.error("WebSocket error:", event);
+        };
+
+        window.addEventListener('beforeunload', function (event) {
+            webSocket.close();
+        });
+    </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
