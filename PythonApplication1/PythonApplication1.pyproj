@@ -1,0 +1,96 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>c57ae741-b44a-49a5-ad03-ef8559b3b4e4</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>PythonApplication1.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PythonApplication1</Name>
+    <RootNamespace>PythonApplication1</RootNamespace>
+    <InterpreterId>MSBuild|projects|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="it_conference\build\lib\it_conference\items.py" />
+    <Compile Include="it_conference\build\lib\it_conference\middlewares.py" />
+    <Compile Include="it_conference\build\lib\it_conference\pipelines.py" />
+    <Compile Include="it_conference\build\lib\it_conference\settings.py" />
+    <Compile Include="it_conference\build\lib\it_conference\spiders\conferences_crawler.py" />
+    <Compile Include="it_conference\build\lib\it_conference\spiders\__init__.py" />
+    <Compile Include="it_conference\build\lib\it_conference\__init__.py" />
+    <Compile Include="it_conference\it_conference\items.py" />
+    <Compile Include="it_conference\it_conference\middlewares.py" />
+    <Compile Include="it_conference\it_conference\pipelines.py" />
+    <Compile Include="it_conference\it_conference\settings.py" />
+    <Compile Include="it_conference\it_conference\spiders\conferences_crawler.py" />
+    <Compile Include="it_conference\it_conference\spiders\__init__.py" />
+    <Compile Include="it_conference\it_conference\__init__.py" />
+    <Compile Include="it_conference\scheduler.py" />
+    <Compile Include="it_conference\setup.py" />
+    <Compile Include="PythonApplication1.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="it_conference\" />
+    <Folder Include="it_conference\build\" />
+    <Folder Include="it_conference\build\bdist.win-amd64\" />
+    <Folder Include="it_conference\build\lib\" />
+    <Folder Include="it_conference\build\lib\it_conference\" />
+    <Folder Include="it_conference\build\lib\it_conference\spiders\" />
+    <Folder Include="it_conference\dbs\" />
+    <Folder Include="it_conference\eggs\" />
+    <Folder Include="it_conference\eggs\it_conference\" />
+    <Folder Include="it_conference\it_conference\" />
+    <Folder Include="it_conference\it_conference\spiders\" />
+    <Folder Include="it_conference\it_conference\spiders\__pycache__\" />
+    <Folder Include="it_conference\it_conference\__pycache__\" />
+    <Folder Include="it_conference\project.egg-info\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="it_conference\dbs\default.db" />
+    <Content Include="it_conference\dbs\it_conference.db" />
+    <Content Include="it_conference\eggs\it_conference\1712332211.egg" />
+    <Content Include="it_conference\it_conference\spiders\__pycache__\conferences-crawler.cpython-312.pyc" />
+    <Content Include="it_conference\it_conference\spiders\__pycache__\conferences_crawler.cpython-312.pyc" />
+    <Content Include="it_conference\it_conference\spiders\__pycache__\__init__.cpython-312.pyc" />
+    <Content Include="it_conference\it_conference\__pycache__\settings.cpython-312.pyc" />
+    <Content Include="it_conference\it_conference\__pycache__\__init__.cpython-312.pyc" />
+    <Content Include="it_conference\project.egg-info\dependency_links.txt" />
+    <Content Include="it_conference\project.egg-info\entry_points.txt" />
+    <Content Include="it_conference\project.egg-info\PKG-INFO" />
+    <Content Include="it_conference\project.egg-info\SOURCES.txt" />
+    <Content Include="it_conference\project.egg-info\top_level.txt" />
+    <Content Include="it_conference\scrapy.cfg" />
+    <Content Include="it_conference\test.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="C:\Users\thuan\scrapy101\projects\">
+      <Id>projects</Id>
+      <Version>0.0</Version>
+      <Description>projects (Python 3.12 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

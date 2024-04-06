@@ -1,0 +1,13 @@
+setup.py
+it_conference/__init__.py
+it_conference/items.py
+it_conference/middlewares.py
+it_conference/pipelines.py
+it_conference/settings.py
+it_conference/spiders/__init__.py
+it_conference/spiders/conferences_crawler.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
