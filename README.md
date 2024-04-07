@@ -2,7 +2,7 @@
 ### Required:
 1. Visual Studio 2022
 2. .NET 8 runtime
-3. Python 3
+3. Python 3.7 and all module in requirements.txt
 ### Not Required:
 - MSSQL (or MySql, but I've not tried it yet) from [here](https://github.com/tyh7121/DANMCNPM/tree/feature/firstCrawler)
 
